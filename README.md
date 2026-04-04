@@ -3,7 +3,6 @@
 A collection of **baremetal Verilog sensor interfaces** implemented completely from scratch without using any prebuilt libraries or IP cores.
 
 This repository includes:
-- DHT11 Temperature & Humidity Sensor Interface  
 - HC-SR04 Ultrasonic Distance Sensor Interface  
 
 Designed for **real-world robotics applications**, focusing on timing accuracy, stability, and reliability.
@@ -16,60 +15,6 @@ Designed for **real-world robotics applications**, focusing on timing accuracy, 
 - **FSM-based designs** with precise timing control  
 - Robust handling of real-world sensor noise  
 - Designed and tested on FPGA  
-
----
-
-# 🌡️ DHT11 Sensor Interface
-
-## Overview
-
-A microsecond-accurate FSM-based implementation of the DHT11 protocol.
-
-Handles complete communication including:
-- Start signal generation  
-- Sensor response detection  
-- 40-bit data reception  
-- Checksum validation  
-
----
-
-## ⚙️ Working
-
-- Uses **1 MHz clock** for microsecond timing  
-- Implements a **Finite State Machine (FSM)**  
-
-### FSM Flow
-
-1. Power-On Delay  
-2. Start Signal (20 ms LOW)  
-3. Response Wait  
-4. Sensor Response (80 µs LOW + HIGH)  
-5. Data Reception (40 bits)  
-6. Checksum Validation  
-7. Delay before next read  
-
----
-
-## 🔌 Inputs & Outputs
-
-### Inputs
-- `clk`
-- `rst_n`
-- `dht11` (inout)
-
-### Outputs
-- `data_valid`
-- `T_integral`
-- `RH_integral`
-
----
-
-## 🧠 Key Concepts
-
-- Microsecond timing  
-- Edge detection  
-- Serial protocol decoding  
-- FSM design  
 
 ---
 
@@ -136,7 +81,6 @@ distance (cm) = echo_time / 58
 
 - FPGA: Intel/Altera DE0-Nano (Cyclone IV E)  
 - Sensors:
-  - DHT11  
   - HC-SR04  
 
 ---
@@ -172,13 +116,8 @@ This repository demonstrates:
 
 ## 👨‍💻 Author
 
-- Naveen Kumar B  
+- Naveen Kumar B
+- Sabarish Mohan JS
+- Hemanth S
 
----
-
-## 📌 Use Cases
-
-- Maze solving robots  
-- Obstacle avoidance systems  
-- Embedded FPGA projects  
-- Robotics competitions  
+ 

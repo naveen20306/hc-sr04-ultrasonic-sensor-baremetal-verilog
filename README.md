@@ -71,8 +71,6 @@ distance (cm) = echo_time / 58
 ## 📊 Output Meaning
 
 - `dist` → Distance in cm  
-- `less5` → Object very close (≤ 5 cm)  
-- `less32` → Object in range (~30–32 cm)  
 - `led` → Stable detection indicator  
 
 ---
@@ -113,11 +111,5 @@ This repository demonstrates:
 - Reliable real-world performance on FPGA  
 
 ---
-
-## 👨‍💻 Author
-
-- Naveen Kumar B
-- Sabarish Mohan JS
-- Hemanth S
 
  

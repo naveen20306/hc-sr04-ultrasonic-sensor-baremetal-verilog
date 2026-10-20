@@ -19,7 +19,7 @@ module ultrasonic(
 
     output reg trig,
     output reg led,
-    output reg [8:0] dist,
+    output reg [8:0] dist
 
 );
 
